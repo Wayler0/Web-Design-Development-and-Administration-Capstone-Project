@@ -1,6 +1,4 @@
-/* Dynamic Class Management Application - Starter Styles */
-
-/* TODO: Add your custom styles here */
+/* Dynamic Class Management Application - Styles */
 
 /* Basic Reset */
 * {
@@ -10,90 +8,321 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f7f6;
     color: #333;
+    line-height: 1.6;
 }
 
-/* TODO: Style the login page */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Login Page */
 .login-container {
-    /* Add styles for centering login box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
 }
 
 .login-box {
-    /* Add styles for login form container */
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
 }
 
-/* TODO: Style the header */
-.main-header {
-    /* Add styles for main header */
+.login-box h1 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #777;
+}
+
+/* Header */
+.header {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
 }
 
 .header-content {
-    /* Add styles for header content layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* TODO: Style the dashboard */
-.dashboard {
-    /* Add styles for dashboard container */
+.logo {
+    font-size: 1.5em;
+    color: #2575fc;
+    font-weight: bold;
 }
 
-/* TODO: Style forms */
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info span {
+    margin-right: 20px;
+}
+
+/* Dashboard */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Forms */
+.form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
 .form-group {
-    /* Add styles for form groups */
+    margin-bottom: 15px;
 }
 
 .form-group label {
-    /* Add styles for labels */
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-    /* Add styles for form inputs */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-/* TODO: Style buttons */
+.form-inline {
+    display: flex;
+    align-items: center;
+}
+
+.form-inline .form-control {
+    width: 100px;
+    margin-right: 10px;
+}
+
+/* Buttons */
 .btn {
-    /* Add base button styles */
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background: #2575fc;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #1a5bbf;
 }
 
 .btn-primary {
-    /* Add primary button styles */
+    background: #2575fc;
 }
 
 .btn-secondary {
-    /* Add secondary button styles */
+    background: #6c757d;
 }
 
 .btn-danger {
-    /* Add danger button styles */
+    background: #dc3545;
 }
 
-/* TODO: Style class cards */
-.classes-grid {
-    /* Add grid layout for classes */
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 0.9em;
 }
 
-.class-card {
-    /* Add styles for individual class cards */
+/* Class Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-/* TODO: Style tables */
-.data-table {
-    /* Add styles for data tables */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* TODO: Style messages */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    margin-bottom: 10px;
+}
+
+.card-text {
+    margin-bottom: 10px;
+}
+
+.card-footer {
+    padding: 15px 20px;
+    background: #f9f9f9;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+}
+
+/* Tables */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background: #f2f2f2;
+}
+
+/* Messages */
 .error-message {
-    /* Add styles for error messages */
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    margin-bottom: 20px;
 }
 
 .success-message {
-    /* Add styles for success messages */
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    margin-bottom: 20px;
 }
 
-/* TODO: Add responsive design for mobile devices */
+/* Modal */
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Attendance Status */
+.status-present { color: green; }
+.status-absent { color: red; }
+.status-late { color: orange; }
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    /* Add mobile-friendly styles */
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .user-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .table, .table thead, .table tbody, .table th, .table td, .table tr {
+        display: block;
+    }
+
+    .table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .table tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+    .table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .table td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    .table td:nth-of-type(1):before { content: "Student Name"; }
+    .table td:nth-of-type(2):before { content: "Email"; }
+    .table td:nth-of-type(3):before { content: "Grade"; }
+    .table td:nth-of-type(4):before { content: "Attendance Rate"; }
+    .table td:nth-of-type(5):before { content: "Actions"; }
 }
