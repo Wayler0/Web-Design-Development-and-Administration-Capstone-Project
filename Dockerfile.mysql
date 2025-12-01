@@ -1,0 +1,6 @@
+# Use the official MySQL 8.0 image from Docker Hub
+FROM mysql:8.0
+
+# Copy the SQL script into the container's initialization directory.
+# Scripts in this directory are automatically executed when the container starts for the first time.
+COPY database/dcma_template.sql /docker-entrypoint-initdb.d/

@@ -1,0 +1,38 @@
+services:
+  # Web service for the PHP application
+  - type: web
+    name: php-app
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free # Or your preferred plan
+    envVars:
+      - key: DB_HOST
+        fromService:
+          type: pserv
+          name: mysql-db
+          property: internalHostname
+      - key: DB_USERNAME
+        value: root
+      - key: DB_PASSWORD
+        fromService:
+          type: pserv
+          name: mysql-db
+          property: rootPassword
+      - key: DB_NAME
+        value: dcma
+
+  # Private service for the MySQL database
+  - type: pserv
+    name: mysql-db
+    env: docker
+    dockerfilePath: ./Dockerfile.mysql
+    plan: free # Or your preferred plan
+    disk:
+      name: mysql-data
+      mountPath: /var/lib/mysql
+      sizeGB: 1
+    envVars:
+      - key: MYSQL_ROOT_PASSWORD
+        generateValue: true
+      - key: MYSQL_DATABASE
+        value: dcma
