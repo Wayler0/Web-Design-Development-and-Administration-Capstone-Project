@@ -11,7 +11,7 @@ services:
       - key: DB_USERNAME
         value: root
       - key: DB_PASSWORD
-        value: "your_strong_password_here" # IMPORTANT: Replace with a strong password and use the same value below
+        value: "KiWNZw2q" # IMPORTANT
       - key: DB_NAME
         value: dcma
 
@@ -26,6 +26,6 @@ services:
     # For data persistence, you would need a paid plan or an external database.
     envVars:
       - key: MYSQL_ROOT_PASSWORD
-        value: "your_strong_password_here" # IMPORTANT: Use the same password as above
+        value: "KiWNZw2q" # IMPORTANT: Use the same password as above
       - key: MYSQL_DATABASE
         value: dcma
