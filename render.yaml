@@ -7,17 +7,11 @@ services:
     plan: free # Or your preferred plan
     envVars:
       - key: DB_HOST
-        fromService:
-          type: pserv
-          name: mysql-db
-          property: internalHostname
+        value: mysql-db # Use the service name as the hostname
       - key: DB_USERNAME
         value: root
       - key: DB_PASSWORD
-        fromService:
-          type: pserv
-          name: mysql-db
-          property: rootPassword
+        value: "your_strong_password_here" # IMPORTANT: Replace with a strong password and use the same value below
       - key: DB_NAME
         value: dcma
 
@@ -27,12 +21,11 @@ services:
     env: docker
     dockerfilePath: ./Dockerfile.mysql
     plan: free # Or your preferred plan
-    disk:
-      name: mysql-data
-      mountPath: /var/lib/mysql
-      sizeGB: 1
+    # NOTE: The free plan does not support persistent disks.
+    # This means your database will be reset on every deploy.
+    # For data persistence, you would need a paid plan or an external database.
     envVars:
       - key: MYSQL_ROOT_PASSWORD
-        generateValue: true
+        value: "your_strong_password_here" # IMPORTANT: Use the same password as above
       - key: MYSQL_DATABASE
         value: dcma
